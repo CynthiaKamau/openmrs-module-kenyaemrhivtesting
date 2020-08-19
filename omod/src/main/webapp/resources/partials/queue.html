@@ -1,0 +1,45 @@
+<div id="wide-sidebar" class="row">
+    <side-navigation menu-item="queue"></side-navigation>
+    <div class="col-lg-8">
+        <div id='wait' class='loader'>
+            &nbsp;
+        </div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Sender</td>
+                <td>{{queue.source}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Kind</td>
+                <td>{{queue.discriminator}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Submitted On</td>
+                <td>{{queue.submitted}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Patient Uuid</td>
+                <td>{{queue.patientUuid}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4"><pre>{{queue.payload}}</pre></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button type="submit" ng-click="delete()" class="btn btn-danger">Delete</button>
+                    <button type="submit" ng-click="cancel()" class="btn btn-primary">Cancel</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
